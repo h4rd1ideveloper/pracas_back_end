@@ -16,7 +16,7 @@ module.exports = {
   |
   */
 
-  name: Env.get('APP_NAME', 'Pracas-api'),
+  name: Env.get('APP_NAME', 'AdonisJs'),
 
   /*
   |--------------------------------------------------------------------------
