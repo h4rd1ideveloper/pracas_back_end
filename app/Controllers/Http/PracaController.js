@@ -26,13 +26,13 @@ class PracaController {
 	async store({ request, response }) {
 		const { ...props } = request.post();
 		if (!props.hasOwnProperty('praca'))
-			return response.status(406).send({ err: true, msg: `Falta propiedade nome para salvar esta praça` });
+			return response.send({ err: true, msg: 'Falta propiedade nome para salvar esta praça' });
 		if (props.hasOwnProperty('estado')) {
 			const res = await Praca.query()
 				.where({ estado: props.estado, praca: props.praca })
 				.getCount();
 			if (res !== 0)
-				return response.status(409).send({ err: true, msg: `Existe uma praça com este Nome e Estado` });
+				return response.send({ err: true, msg: 'Existe uma praça com este Nome e Estado' });
 		}
 		const newPraca = await Praca.create(props);
 		return newPraca;
