@@ -9,7 +9,7 @@ class PracaSchema extends Schema {
       table.increments()
       table.string('praca', 80).notNullable()
       table.string('sigla', 3)
-      table.string('estado')
+      table.string('estado', 2)
       table.timestamps()
     })
   }
