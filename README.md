@@ -1,9 +1,9 @@
 # Back-end para Registro de praças
 Check o arquivo .env, tenha certeza de que os dados de conexão com o banco é valido, e que o banco existe
 
-HOST=127.0.0.1 // localhot
+HOST=127.0.0.1 // caminho localhot
 
-PORT=3333 // porta que ira rodar a aplicação
+PORT=3333 // porta
 
 NODE_ENV=development
 
